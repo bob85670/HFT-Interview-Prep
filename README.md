@@ -36,7 +36,7 @@ Guide to prepare for HFT interviews (SWEs)
 ## System Design:
  
   Reading: 
-  1. System Design Interview - (Good, will help bit long tho)
+  1. System Design Interview By Alex Lu - (Good, will help bit long tho)
   
   Watching
   1. Grokking Modern System Design Interview - Educative.io (Can finish it quite quick, pair that with practicing random cases with a friend)
