@@ -33,6 +33,15 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   3. CSES Problem set - https://cses.fi/problemset/list (Harder than LC but will make you better)
   
   
+## Langauge Specifics:
+  
+  C++:
+  1. Learn CPP dot com - https://www.learncpp.com/ (Really good intro to cpp)
+  2. Effective Modern C++ - https://www.amazon.co.uk/Effective-Modern-Specific-Ways-Improve/dp/1491903996
+  
+  Rust:
+  1. 
+  
 ## System Design:
  
   Reading: 
