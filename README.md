@@ -1,5 +1,5 @@
 # HFT-Interview-Prep
-Guide to prepare for HFT interviews (SWEs)
+Guide to prepare for HFT interviews (SWEs) - WIP, will continue to add as I am finding new resources myself :p
 
 ## Operating Systems/Low-level Knowledge:
 
