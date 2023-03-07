@@ -46,6 +46,10 @@ Guide to prepare for HFT interviews (SWEs)
 
   Reading: 
   1. Developing High-Frequency Trading Systems: Learn how to Implement High-frequency Trading from Scratch with C++ Or Java Basics (10/10 imo, really good and touches on relevant topics i.e operating systems/concurrency, networkig, domain knowledge)
+  2. Will list other good books soon
+
+  Doing:
+  1. BUILD BUILD BUILD, no better way to learn than to build you own projects focused on HFT i.e. Order Book implementaion.
 
   
   
