@@ -29,7 +29,7 @@ Guide to prepare for HFT interviews (SWEs)
   
   Doing:
   1. Neetcode.io -  https://neetcode.io/practice (Do the neetcode 150)
-  2. Leetcode - https://leetcode.com/ (obvious but yeah needed, do contests on weekends to build up solving qs in time pressue)
+  2. Leetcode - https://leetcode.com/ (obvious but needed, do contests on weekends to build up the skill to solve qs under time pressue)
   3. CSES Problem set - https://cses.fi/problemset/list (Harder than LC but will make you better)
   
   
