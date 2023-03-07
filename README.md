@@ -25,7 +25,7 @@ Guide to prepare for HFT interviews (SWEs)
 
   Reading:
   1. Competitive Programmer’s Handbook - https://cses.fi/book/book.pdf (short & sweet)
-  2. Introduction to Algorithms - N/A (long, but whatever you knowlede you need to conslidate from CP handbook read on specifc chapters & answer qs)
+  2. Introduction to Algorithms - N/A (long, but whatever knowledge you need to consolidate from CP handbook read on specifc chapters & answer qs)
   
   Doing:
   1. Neetcode.io -  https://neetcode.io/practice (Do the neetcode 150)
