@@ -32,6 +32,9 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   2. Leetcode - https://leetcode.com/ (obvious but needed, do contests on weekends to build up the skill to solve qs under time pressue)
   3. CSES Problem set - https://cses.fi/problemset/list (Harder than LC but will make you better)
   
+  Advice:
+  1. If you're going for ultra high-frequnecy shops i.e HRT/Jump/XTX etc best to use cpp for your DSA prep, will help you get used to the language faster &   you'll learn how to use commom std lib data structures  
+  
   
 ## Langauge Specifics:
   
