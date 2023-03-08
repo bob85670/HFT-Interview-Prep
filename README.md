@@ -42,6 +42,9 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   Rust:
   1. 
   
+  Go:
+  1.
+  
 ## System Design:
  
   Reading: 
