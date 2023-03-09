@@ -64,7 +64,7 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   2. Will list other good books soon
 
   Doing:
-  1. BUILD BUILD BUILD, no better way to learn than to build you own projects focused on HFT i.e. Order Book implementaion.
+  1. BUILD BUILD BUILD, no better way to learn than to build you own projects focused on HFT i.e. Order Book implementaion, order managment system, you're own MM bot etc etc (will hopefully make my ones public for learning purposes).
 
   
   
