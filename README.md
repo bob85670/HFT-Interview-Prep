@@ -64,7 +64,7 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   2. Ace the Trading Systems Developer Interview (C++ Edition) By Dennis Thompson - (Good for quick interview prep to brush up on c++ trivia etc, not a resource to rely on but will help if your forgot some lang specfic stuff + OS/Networking qs)
 
   Doing:
-  1. BUILD BUILD BUILD, no better way to learn than to build you own projects focused on HFT i.e. Order Book implementaion, order managment system, you're own MM bot etc etc (will hopefully make my ones public for learning purposes).
+  1. BUILD BUILD BUILD, no better way to learn than to build you own projects focused on HFT i.e. Order Book implementation, order managment system, your own MM bot etc etc (will hopefully make my ones public for learning purposes).
 
   
   
