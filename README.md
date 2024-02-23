@@ -5,8 +5,9 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
 
   Reading:
   1. Operating Systems: Three Easy Pieces - https://pages.cs.wisc.edu/~remzi/OSTEP/
-  2. Algorithmica / HPC - https://en.algorithmica.org/hpc/
+  2. Algorithmica / HPC - https://en.algorithmica.org/hpc/ (AMAZING resource, concise and has all the basics you need/can read in < a week)
   3. What Every Programmer Should Know About Memory - https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+  4. https://book.easyperf.net/perf_book
   
   Watching:
   1. CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High-Performance Trading Systems in C++” - https://www.youtube.com/watch?v=NH1Tta7purM (Goated)
