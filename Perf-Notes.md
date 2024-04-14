@@ -35,6 +35,9 @@ unsigned a; unsigned b; unsigned c;
             ```
           With dynamic allocation via malloc, the returned memory is guaranteed to meet alignment requirements but you can benefit from stricter alignment. Also with SMID code addresses need to be divisible by 16, 32 or 64, vec types given by SMID intrinsic headers are annotated to ensure alignment.  
       - <ins> Dynamic memory allocation: </ins>
+      - <ins> Tune the code for memory hierarchy: </ins>
+      - <ins> Explicit Memory Prefetching: </ins>
+    - <ins> Optimizing For DTLB: </ins>
   
  
 
