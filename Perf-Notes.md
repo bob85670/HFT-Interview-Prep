@@ -35,8 +35,13 @@ unsigned a; unsigned b; unsigned c;
             ```
           With dynamic allocation via malloc, the returned memory is guaranteed to meet alignment requirements but you can benefit from stricter alignment. Also with SMID code addresses need to be divisible by 16, 32 or 64, vec types given by SMID intrinsic headers are annotated to ensure alignment.  
       - <ins> Dynamic memory allocation: </ins>
+        - Using dynamic memory allocation i.e. malloc, causes problems such as speed, scalability and fragmentation. Also, problems with start-up threads racing to allocate memory to the same region. Using custom allocators such as arena allocator is faster and has low overhead as allocators don't execute sys calls for every mem allocation. Also, very flexible as you can have your own mem allocation strats based on mem regions provided by the OS.
+        - A simple strat would be to maintain two allocators with diff arenas (one for hot and cold) allowing hot data to share a cache line (improves bandwidth, utilization and spatial locality). Also better TLB utilisation, as hot data would occupy fewer pages. Custom allocators can also use thread-local storage per thread allocation so no sync between (good if app is based on thread pool and doesn't spawn a lot of threads).
       - <ins> Tune the code for memory hierarchy: </ins>
+        - Perf depends on size of cache at a level, for example, use loop tilting to break size of data to chunks so they can fit in L2.
       - <ins> Explicit Memory Prefetching: </ins>
+        -  Can be very bad when used wrong, consumes CPU resources, is not portable (won't work for multiple platforms) and if you use the wrong size of mem block or prefetch to often can evict needed data from cache.
+        -  When to use? When the hardware can't effectively pre-fetch as there is no clear access pattern which in turn causes lots of cache misses and you can estimate a good prefetch window add ``` __builtin_prefetch() ``` well before the load so it's ready ( but if you do it too early you may pollute the cache with data not needed rn and evict other data required) (hard to get right ik lmao).  
     - <ins> Optimizing For DTLB: </ins>
   
  
