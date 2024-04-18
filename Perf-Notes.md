@@ -43,6 +43,8 @@ unsigned a; unsigned b; unsigned c;
         -  Can be very bad when used wrong, consumes CPU resources, is not portable (won't work for multiple platforms) and if you use the wrong size of mem block or prefetch to often can evict needed data from cache.
         -  When to use? When the hardware can't effectively pre-fetch as there is no clear access pattern which in turn causes lots of cache misses and you can estimate a good prefetch window add ``` __builtin_prefetch() ``` well before the load so it's ready ( but if you do it too early you may pollute the cache with data not needed rn and evict other data required) (hard to get right ik lmao).  
     - <ins> Optimizing For DTLB: </ins>
+      - As we know, the TLB is a fast per-core cache that allows us to translate virtual addresses into physical addresses. Without we would have to page walk up multiple layers of page tables (BAD!). The hierarchy goes as follows L1 ITLB (instructions), L1 DTLB (data), and L2 STLB (shared between instruction and data). A L1 ITLB miss has a small penalty due to out-of-order execution (executes next instruction instead of waiting) but a miss in the STLB invokes a noticeable page walk as the CPU is stalled. (random numbers to remember page size is normally 4KB l1 can take few 100 ~1MB but l2 thousands). Using larger page sizes, the TLB entry can cover a larger memory range thus better utilisation of the TLB slots!
+      - <ins> Explicit Hugepages: </ins>  
   
  
 
