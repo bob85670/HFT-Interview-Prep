@@ -1,15 +1,18 @@
 ## Chapter 8 CPU Back-End Optimisations:
 - Inefficiencies occur in the CPU back-end (BE) after the front-end (FE) fetches and decodes instructions. However, BE can’t execute said instruction due to two main reasons Memory Bound and Core Bound which causes it to overload and stall as it can’t get the required resources i.e. data-cache miss. 
 - Only optimise code for BE when TMA points to a high “Back-End Bound” metric which is then broken down into mem or core bound.
-- Memory Bound:
+- <ins> Memory Bound Optimisations </ins>:
   - Occurs when an application executes many mem accesses and spends time waiting for them to finish, in this case, we would need to optimise how we can better access memory i.e. fewer accesses or better mem subsystem.
   - In TMA, the memory bound metric estimates a fraction of some slots where the CPU is stalled due to demand for load or store instructions. Would need to identify memory access that contributes to this metric e.g. ```perf record -e cpu/event=0xd1,umask=0x20,name=MEM_LOAD_RETIRED.L3_MISS/ppp ``` (records l3 misses) and ```perf report -n --stdio``` (outputs a report of funcs with highest misses) i.e. ```99.95%    33811   a.out     [.] foo ``` (revisit chapter 6.1.4 if unclear)
   - Once identified we can use a few perf tricks:
     - <ins> Cache-Friendly Data Structures: </ins>
       - Fetching a variable from main memory takes > 100 clock cycles compared to the few it takes from the cache, to prevent this write code that is cache-friendly with spatial and temporal locality in mind, to allow for efficient fetching of data from caches. think in terms of cache lines and not individual variables in memory.
-      - <ins> Access data sequentially: </ins> To exploit the spatial locality of the caches is to make sequential memory accesses. This makes HW prefetcher, recognise the mem access pattern and bring the next chunk ahead of time. For example, a standard bin search is not sequential as it accesses elements all over the memory that do not share the same cache line. To avoid this, one could store elements of the array using the Eytzinger layout. This maintains an implicit bin search tree packed into an array (using bfs-like-layout like in heaps).
-      - <ins> Use appropriate containers: </ins> There are various containers in C++, one should know the performance trade-offs of each and why i.e. map vs unordered_map. Also, choose the data storage with what the code will do with it in mind e.g. storing objects in an array vs storing pointers to memory in an array (when size is big). The latter takes less amount of memory and will benefit operations that modify the array (less mem transferred). However, a linear scan through an array the former would be better as it's more cache-friendly (no indirect mem access)
-      - <ins> Packing the data: </ins> Mem hierarchy utilization will improve by making data more compact. To pack data, one can use bitfields e.g. ```
+      - <ins> Access data sequentially: </ins>
+        - To exploit the spatial locality of the caches is to make sequential memory accesses. This makes HW prefetcher, recognise the mem access pattern and bring the next chunk ahead of time. For example, a standard bin search is not sequential as it accesses elements all over the memory that do not share the same cache line. To avoid this, one could store elements of the array using the Eytzinger layout. This maintains an implicit bin search tree packed into an array (using bfs-like-layout like in heaps).
+      - <ins> Use appropriate containers: </ins>
+        - There are various containers in C++, one should know the performance trade-offs of each and why i.e. map vs unordered_map. Also, choose the data storage with what the code will do with it in mind e.g. storing objects in an array vs storing pointers to memory in an array (when size is big). The latter takes less amount of memory and will benefit operations that modify the array (less mem transferred). However, a linear scan through an array the former would be better as it's more cache-friendly (no indirect mem access)
+      - <ins> Packing the data: </ins>
+        - Mem hierarchy utilization will improve by making data more compact. To pack data, one can use bitfields e.g. ```
   struct S {
 unsigned a:4; unsigned b:2; unsigned c:2;
 }; // S is only 1 byte
@@ -44,7 +47,14 @@ unsigned a; unsigned b; unsigned c;
         -  When to use? When the hardware can't effectively pre-fetch as there is no clear access pattern which in turn causes lots of cache misses and you can estimate a good prefetch window add ``` __builtin_prefetch() ``` well before the load so it's ready ( but if you do it too early you may pollute the cache with data not needed rn and evict other data required) (hard to get right ik lmao).  
     - <ins> Optimizing For DTLB: </ins>
       - As we know, the TLB is a fast per-core cache that allows us to translate virtual addresses into physical addresses. Without we would have to page walk up multiple layers of page tables (BAD!). The hierarchy goes as follows L1 ITLB (instructions), L1 DTLB (data), and L2 STLB (shared between instruction and data). A L1 ITLB miss has a small penalty due to out-of-order execution (executes next instruction instead of waiting) but a miss in the STLB invokes a noticeable page walk as the CPU is stalled. (random numbers to remember page size is normally 4KB l1 can take few 100 ~1MB but l2 thousands). Using larger page sizes, the TLB entry can cover a larger memory range thus better utilisation of the TLB slots!
-      - <ins> Explicit Hugepages: </ins>  
+      - <ins> Explicit Hugepages: </ins>
+        - Huge pages are part of the system's memory presented as a huge page file system (hugelbfs) that can be accessed using system calls e.g. mmap, can allocate dynamically using the lib "libhugetlbfs" that overrides malloc calls.
+      - <ins> Transparent Hugepages: </ins>
+        - Linux offers Transparent Hugepage's (THP) which auto manages large pages and is transparent for applications, in Linux you can enable THP which dynamically switches to huge pages when large blocks of memory are needed. Has two modes of operation (system-wide: The kernel assigns huge pages to any process when it is possible so don't need to reserve manually && per-process: kernel only assigns huge pages individually per-process memory areas)
+      - <ins> Explicit vs Transparent Hugepages: </ins>
+        - EHP are reserved in virtual memory upfront, THPs are not. With THPs kernel attempts to assign a THP and if it fails, a standard 4KB page is given which happens transparent to the user. The allocation process involves a number of kernel processes to make space in virtual memory (latency overhead and some fragmentation/swapping to make space). EHP are not subject to these things and is available to use on all segments (like text which is good for DTLB and ITLB) while THP are only available for dynamically allocated memory regions.
+        - Less config needed for THP though which is better for faster experiments.
+- <ins> Core Bound Optimisations: </ins>
   
  
 
