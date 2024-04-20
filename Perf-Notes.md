@@ -55,6 +55,11 @@ unsigned a; unsigned b; unsigned c;
         - EHP are reserved in virtual memory upfront, THPs are not. With THPs kernel attempts to assign a THP and if it fails, a standard 4KB page is given which happens transparent to the user. The allocation process involves a number of kernel processes to make space in virtual memory (latency overhead and some fragmentation/swapping to make space). EHP are not subject to these things and is available to use on all segments (like text which is good for DTLB and ITLB) while THP are only available for dynamically allocated memory regions.
         - Less config needed for THP though which is better for faster experiments.
 - <ins> Core Bound Optimisations: </ins>
+  - Core bound bottlenecks can be defined in two ways, 1: Shortage in hardware compute resources (limited throuput) and 2: Dependacies between software instructions (increase latency). The idea with core bound optimisations is decreasing the number of instructions so we can free up hardware compute rescources and decrease the amount of dendancies causing to stall less (removing stall is a memory bound issue).
+  - <ins> Inlining Functions: </ins>
+    - As we know, inlining a function is bringing the code into the callers scope which mitigates the overhead invoked by calling the function (storing variables on the stack etc). Modern compliers are very smart and normally inline functions as they see fit, but as a programmer we can force inlines with new infomration.
+    - How does the complier chose when to inline? They rely on a sort of cost model, for example LLVM complier basis it on conputing cost and a threshold for each function call (inlining happens if cost < threshold) (cost == # and the type of instructions in that function). Thresholds are normally fixed but can be varied under circumstances. Tiny funcs, funcs with single callsite are always linlined and large funcs aren't (too much code bloat takes longer to compile). Recusive funcs cant inline themselves and fucns that are refered to by a pointer.
+    -   
   
  
 
