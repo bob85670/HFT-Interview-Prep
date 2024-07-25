@@ -44,7 +44,10 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   2. Effective Modern C++ - https://www.amazon.co.uk/Effective-Modern-Specific-Ways-Improve/dp/1491903996
   
   Rust (For crypto-focused HFTs):
-  1. https://rust-book.cs.brown.edu/title-page.html 
+  1. https://rust-book.cs.brown.edu/title-page.html - Intro to rust book
+  2. https://github.com/rust-lang/rustlings  - Small Rust challenges to get used to the language.
+  3. https://doc.rust-lang.org/nomicon/ - Advanced topics in Rust
+  4. https://www.youtube.com/@letsgetrusty/videos - Best youtube vids
   
 ## System Design:
  
