@@ -8,6 +8,7 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   2. Algorithmica / HPC - https://en.algorithmica.org/hpc/ (AMAZING resource, concise and has all the basics you need/can read in < a week)
   3. What Every Programmer Should Know About Memory - https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
   4. Performance book: https://book.easyperf.net/perf_book + https://github.com/dendibakh/perf-ninja (do the labs and watch vids after reading book)
+  5. Inside The Machine - a more in-depth book about CPU hardware.
   
   Watching:
   1. CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High-Performance Trading Systems in C++” - https://www.youtube.com/watch?v=NH1Tta7purM (Goated)
@@ -19,7 +20,7 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
  
 ## Networking:
 
-  Adding soon
+  1. TCP/IP Illustrated - has all networking knowledge needed.
 
 
 ## DSA/Algo Interview Prep:
