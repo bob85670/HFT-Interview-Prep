@@ -43,6 +43,8 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   C++:
   1. Learn CPP dot com - https://www.learncpp.com/ (Really good intro to cpp)
   2. Effective Modern C++ - https://www.amazon.co.uk/Effective-Modern-Specific-Ways-Improve/dp/1491903996
+  3. Optimizing software in C++ - https://www.agner.org/optimize/optimizing_cpp.pdf
+  4. C++ High Performance - https://www.amazon.com/High-Performance-Master-optimizing-functioning/dp/1839216549
   
   Rust (For crypto-focused HFTs):
   1. https://rust-book.cs.brown.edu/title-page.html - Intro to rust book
