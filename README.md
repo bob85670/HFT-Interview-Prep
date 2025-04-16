@@ -40,18 +40,23 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   
 ## Langauge Specifics:
   
-  C++:
+  C++: (maybe outta date idk)
   1. Learn CPP dot com - https://www.learncpp.com/ (Really good intro to cpp)
   2. Effective Modern C++ - https://www.amazon.co.uk/Effective-Modern-Specific-Ways-Improve/dp/1491903996
   3. Optimizing software in C++ - https://www.agner.org/optimize/optimizing_cpp.pdf
   4. C++ High Performance - https://www.amazon.com/High-Performance-Master-optimizing-functioning/dp/1839216549
   
   Rust (For crypto-focused HFTs):
-  1. https://rust-book.cs.brown.edu/title-page.html - Intro to rust book
+  1. https://rust-book.cs.brown.edu/title-page.html - Intro to Rust book
   2. https://github.com/rust-lang/rustlings  - Small Rust challenges to get used to the language.
-  3. https://doc.rust-lang.org/nomicon/ - Advanced topics in Rust
-  4. https://www.youtube.com/@letsgetrusty/videos - Best youtube vids
-  
+  3. https://rust-lang.github.io/async-book/part-guide/intro.html - Async Rust guide (Also read Tokio docs + watch 
+Jon Gjengset: Decrusting tokio crate on YT).
+  4. https://rust-unofficial.github.io/patterns/intro.html - Design patterns.
+  5. https://nnethercote.github.io/perf-book/title-page.html - Rust perf book.
+  6. https://marabos.nl/atomics/ - low lvl stuff.
+  7. https://doc.rust-lang.org/nomicon/ - unsafe topics in Rust.
+  8. https://rust-unofficial.github.io/too-many-lists/index.html - exaples using all of above :).
+      
 ## System Design:
  
   Reading: 
