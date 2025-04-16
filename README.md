@@ -55,7 +55,7 @@ Jon Gjengset: Decrusting tokio crate on YT).
   5. https://nnethercote.github.io/perf-book/title-page.html - Rust perf book.
   6. https://marabos.nl/atomics/ - low lvl stuff.
   7. https://doc.rust-lang.org/nomicon/ - unsafe topics in Rust.
-  8. https://rust-unofficial.github.io/too-many-lists/index.html - exaples using all of above :).
+  8. https://rust-unofficial.github.io/too-many-lists/index.html - exaples using all of above.
       
 ## System Design:
  
