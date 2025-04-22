@@ -9,7 +9,6 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
   3. What Every Programmer Should Know About Memory - https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
   4. Performance book: https://book.easyperf.net/perf_book + https://github.com/dendibakh/perf-ninja (do the labs and watch vids after reading book)
   5. Inside The Machine - a more in-depth book about CPU hardware.
-  6. https://0xax.gitbooks.io/linux-insides/content/ - Linux internals.
   
   Watching:
   1. CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High-Performance Trading Systems in C++” - https://www.youtube.com/watch?v=NH1Tta7purM (Goated)
