@@ -71,19 +71,6 @@ Jon Gjengset: Decrusting tokio crate on YT).
   6. https://marabos.nl/atomics/ - low lvl stuff.
   7. https://doc.rust-lang.org/nomicon/ - unsafe topics in Rust.
   8. https://rust-unofficial.github.io/too-many-lists/index.html - examples using all of above.
-  9. https://alonely0.github.io/blog/unions/
-  10. https://aayushyavajpayee.substack.com/p/coming-soon?utm_medium=ios
-  11. https://predr.ag/blog/definitive-guide-to-sealed-traits-in-rust/
-  12. https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
-  13. https://ryhl.io/blog/async-what-is-blocking/
-
-### Stream Processing (Rust):
-
-- Iterators: <https://github.com/alexpusch/rust-magic-patterns/tree/master/dumbing-down-iterator>
-- Streams Part 1: <https://github.com/alexpusch/rust-magic-patterns/blob/master/rust-stream-visualized/Readme.md>
-  - <https://blog.polybdenum.com/2022/07/24/fixing-the-next-thousand-deadlocks-why-buffered-streams-are-broken-and-how-to-make-them-safer.html>
-  - <https://without.boats/blog/poll-progress/>
-- Streams Part 2: <https://github.com/alexpusch/rust-magic-patterns/blob/master/async-pipeline-pattern/Readme.md>
 
 ## System Design:
 
