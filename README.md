@@ -72,6 +72,14 @@ Jon Gjengset: Decrusting tokio crate on YT).
   7. https://doc.rust-lang.org/nomicon/ - unsafe topics in Rust.
   8. https://rust-unofficial.github.io/too-many-lists/index.html - examples using all of above.
 
+### Stream Processing (Rust):
+
+- Iterators: <https://github.com/alexpusch/rust-magic-patterns/tree/master/dumbing-down-iterator>
+- Streams Part 1: <https://github.com/alexpusch/rust-magic-patterns/blob/master/rust-stream-visualized/Readme.md>
+  - <https://blog.polybdenum.com/2022/07/24/fixing-the-next-thousand-deadlocks-why-buffered-streams-are-broken-and-how-to-make-them-safer.html>
+  - <https://without.boats/blog/poll-progress/>
+- Streams Part 2: <https://github.com/alexpusch/rust-magic-patterns/blob/master/async-pipeline-pattern/Readme.md>
+
 ## System Design:
 
   Reading:
