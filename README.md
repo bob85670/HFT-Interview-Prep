@@ -33,7 +33,8 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
 
 ## Networking:
 
-  1. TCP/IP Illustrated - has all networking knowledge needed.
+  1. TCP/IP Illustrated - has all the networking knowledge needed.
+  2. Learn eBPF + io_uring syscall 
 
 
 ## DSA/Algo Interview Prep:
