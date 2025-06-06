@@ -34,7 +34,7 @@ Guide to prepare for HFT interviews (SWEs) - **WIP**, will continue to add as I 
 ## Networking:
 
   1. TCP/IP Illustrated - has all the networking knowledge needed.
-  2. Learn eBPF + io_uring syscall 
+  2. Learn eBPF (https://github.com/eunomia-bpf/bpf-developer-tutorial?tab=readme-ov-file) + io_uring syscall 
 
 
 ## DSA/Algo Interview Prep:
