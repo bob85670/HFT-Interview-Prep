@@ -73,6 +73,7 @@ Jon Gjengset: Decrusting tokio crate on YT).
   6. https://marabos.nl/atomics/ - low lvl stuff.
   7. https://doc.rust-lang.org/nomicon/ - unsafe topics in Rust.
   8. https://rust-unofficial.github.io/too-many-lists/index.html - examples using all of above.
+  9. https://os.phil-opp.com - Great blog series on creating an OS in rust.
 
 ## System Design:
 
